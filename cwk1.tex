@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+1. 
+
+\underline{Constraint (a) :}
+
+For constraint (a), where both the bride and the groom must be in the picture, we need to choose 3 people from the remaining 8 (excluding the bride and the groom) to join them. This can be calculated using combinations.
+
+The number of ways to choose 3 people from 8 is $ C(8, 3) $. Then, as the bride and groom are fixed, we arrange these 5 people in a row, which is $ P(5, 5) $.
+
+So, the total number of arrangements for constraint (a) is $ C(8, 3) \times P(5, 5) $.
+
+Calculating:
+\[ C(8, 3) = \frac{8!}{3!(8-3)!} = \frac{8!}{3!5!} = 56 \]
+\[ P(5, 5) = 5! = 120 \]
+
+\[ \text{Total arrangements for constraint (a)} = C(8, 3) \times P(5, 5) = 56 \times 120 = 6720 \]
+
+\underline{Constraint (b) :}
+
+For constraint (b), where the bride must be next to the groom, we consider them as a single entity $ BG $. Then, we have 4 entities to arrange: $ BG, P_1, P_2, $ and $ P_3 $. This can be calculated using permutations.
+
+The number of ways to arrange the bride and groom as a pair is $ P(2, 2) $. Then, we choose 3 people from the remaining 8 (excluding the bride and the groom) to join them. This can be calculated using combinations, $ C(8, 3) $. Finally, we arrange the remaining 4 entities, which is $ P(4, 4) $.
+
+So, the total number of arrangements for constraint (b) is $ P(2, 2) \times C(8, 3) \times P(4, 4) $.
+
+Calculating:
+\[ P(2, 2) = 2! = 2 \]
+\[ C(8, 3) = \frac{8!}{3!(8-3)!} = \frac{8!}{3!5!} = 56 \]
+\[ P(4, 4) = 4! = 24 \]
+
+\[ \text{Total arrangements for constraint (b)} = P(2, 2) \times C(8, 3) \times P(4, 4) = 2 \times 56 \times 24 = 2688 \]
+
+2. To solve this problem, we need to consider the circular arrangement of 10 people around a table. 
+
+Given:
+\begin{itemize}
+    \item Two seatings are considered the same when everyone has the same immediate left and immediate right neighbor.
+\end{itemize}
+
+In a circular arrangement, the number of ways to arrange n distinct objects is (n-1)!. This is because we can fix one person and arrange the others relative to them, which eliminates the identical arrangements that come from rotations.
+
+To solve this, we can fix one person in a seat, and then arrange the remaining 9 people around the table. Since the table is circular, the position of the fixed person doesn't matter.
+So the number of ways to arrange 9 people in a row is \( P(9, 9) \) (permutations of 9 objects).
+
+Calculating:
+\[ P(9, 9) = 9! = 362,880 \]
+
+\textbf{3.}
+\textbf{This problem can be divided into two parts:}
+
+\textbf{Poker hands that do not contain a King}: There are 4 Kings in a deck of 52 cards. So, there are 52 - 4 = 48 cards that are not Kings. The number of ways to choose 5 cards from these 48 is given by the combination formula “48 choose 5”, 
+denoted as $C(48, 5)$ .
+
+
+\textbf{Poker hands that contain exactly one suit}: Since there are 4 suits and each suit has 13 cards, the number of ways to choose 5 cards from one suit is given by “13 choose 5”, denoted as $C(13, 5)$. Since there are 4 suits, the total number of such hands is 
+$4 \times C(13, 5)$.
+
+
+However, there is an overlap between these two categories: hands that contain exactly one suit and do not contain a King. These are counted in both of the above categories, so we need to subtract them out once. The number of such hands is $C(12, 5)$, since we are choosing 5 cards from the 12 non-King cards in one suit.
+So, the total number of poker hands that do not contain a King or contain exactly one suit is:
+
+\[ C(48, 5) + 4 \times C(13, 5) - 4 \times C(12, 5) = 1,714,284 \]
+\end{document}

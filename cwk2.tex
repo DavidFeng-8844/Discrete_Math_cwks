@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{1.}
+\underline{(a).}
+To solve this problem, we can first consider the shelf five that contain exactly ten books, since all books are identical.  
+There is only one way to arrange the books. Then this question become to arrange the rest 20 books into the remaining four shelves.
+It is a Combinations with Unlimited Repetition problems. However, since there are no empty shelves, we can first assign one book to each shelf, then we have 16 books left to distribute among the four shelves.
+The problem now become to find the number of ways to distribute 16 identical books among 4 shelves, which is a Combinations with Repetition problem.
+Then we can write the number of ways to distribute 16 identical books among 4 shelves as $C(16+4-1, 4-1)$.
+So the final answer is \[1 \times 1 \times C(16+4-1, 4-1) = 969\].
+
+\underline{(b).}
+To solve the problem with the added condition that each shelf \(i\) gets at least \(i\) books, we can approach it differently.
+
+Let's denote \(x_i\) as the number of books placed on shelf \(i\). According to the condition, each \(x_i\) must be at least \(i\). So, we can consider that \(x_i = i + y_i\), where \(y_i\) represents additional books placed on shelf \(i\) beyond the minimum requirement. 
+
+Now, the problem transforms into finding non-negative integer solutions to the equation:
+
+\[x_1 + x_2 + x_3 + x_4 + x_5 = 30\]
+
+Substituting the values of \(x_i\), we get:
+
+\[(1+y_1) + (2+y_2) + (3+y_3) + (4+y_4) + (5+y_5) = 30\]
+
+Rearranging terms, we have:
+
+\[y_1 + y_2 + y_3 + y_4 + y_5 = 30 - (1 + 2 + 3 + 4 + 5) = 15\]
+
+Now, we need to find the number of non-negative integer solutions to this equation.
+
+We can use the stars and bars method again. The number of non-negative integer solutions to the equation \(y_1 + y_2 + \ldots + y_k = n\) is given by \(\binom{n+k-1}{k-1}\).
+
+In this case, \(n = 15\) and \(k = 5\), so the number of solutions is:
+
+\[\binom{15+5-1}{5-1} = \binom{19}{4}\]
+
+Now, let's calculate:
+
+\[\binom{19}{4} = \frac{19!}{4!(19-4)!} = \frac{19!}{4! \times 15!}\]
+
+\[= \frac{19 \times 18 \times 17 \times 16}{4 \times 3 \times 2 \times 1}\]
+
+\[= 3876\]
+
+So, there are 3876 ways to arrange the books on the shelves subject to the given conditions.
+
+\textbf{2.}
+Accoring to the pigeonhole model, to ensure that the child grabs at least 7 candies of the same type from three kinds of candies, we can make the k = 3, and r = 7. Then we can use the pigeonhole principle to find the minimum number of candies the child must grab. 
+
+So, the least number of candies the child must grab is:
+
+\[N = k(r - 1) + 1 = 19\]
+
+
+The child must grab at least 19 candies to ensure they have at least 7 candies of the same type.
+
+\textbf{3.}
+We can use the binomial theory to find the coefficient of $a^2b^8$ when the expression of $(2a + b + 5)^{12}$ is expanded.
+First we can find the number of ways to choose 2 \(a\)'s and 8 \(b\)'s from the 12 terms. This is given by the binomial coefficient \(\binom{12}{2, 8, 2}\).
+Then, we multiply this by the corresponding powers of \(2a\), \(b\), and 5 to get the coefficient of \(a^2b^8\).
+Then the answer would be \[ \binom{12}{8} \times \binom{4}{2} \times (2)^2 \times (1)^8 \times (5)^2 = 297000\]
+\end{document}

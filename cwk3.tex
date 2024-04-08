@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath}  % For mathematical symbols
+
+\begin{document}
+
+\title{Couresework 3}
+\author{Yujie Feng}
+\date{\today}
+\maketitle
+
+\section*{Problem 1: Probability of Event A}
+
+Let \(A\) be the event that the first child is a boy or that the last two children are girls. We have two scenarios:
+
+\begin{itemize}
+    \item \textbf{First child is a boy}:
+    The probability of the first child being a boy is \(P(\text{boy}) = \frac{1}{2}\).
+
+    \item \textbf{Last two children are girls}:
+    The probability of the last two children being girls is \(P(\text{girls}) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}\).
+\end{itemize}
+
+Since these scenarios are mutually exclusive, we can add their probabilities:
+\[ P(A) = P(\text{boy}) + P(\text{girls}) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4} \]
+
+\section*{Problem 2: Conditional Probability}
+
+Let \(F\) represent the event of having fair hair, and \(H\) represent the event of having freckles. We want to find \(P(H|F)\):
+\[ P(H|F) = \frac{P(F|H) \cdot P(H)}{P(F)} = \frac{0.4 \cdot 0.06}{0.2} = 0.12 \]
+
+\section*{Problem 3: Independence of Events}
+
+Let's define the events:
+\begin{itemize}
+    \item \(E1\): Scores have the same parity (both odd or both even).
+    \item \(E2\): Scores differ by 4.
+\end{itemize}
+
+To check for independence, we compare the joint probability with the product of individual probabilities:
+\[ P(E1 \cap E2) \stackrel{?}{=} P(E1) \cdot P(E2) \]
+
+\begin{align*}
+    P(E1) &= \frac{9}{36} + \frac{9}{36} = \frac{1}{2}\quad \text{(probability of same parity)} \\
+    P(E2) &= \frac{1}{9} \quad \text{(probability of score difference by 4)} \\
+    P(E1 & \cap E2) = \frac{1}{9}
+\end{align*}
+
+Since \(P(E1 \cap E2) \neq P(E1) \cdot P(E2)\), the events \(E1\) and \(E2\) are not \textbf{independent}.
+
+
+\end{document}
