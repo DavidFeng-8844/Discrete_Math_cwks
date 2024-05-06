@@ -6,7 +6,7 @@
 
 \textbf{Claim}: If $G \cong H$, then $\overline{G} \cong \overline{H}$, where $\overline{G}$ and $\overline{H}$ are the complements of $G$ and $H$ respectively.
 
-\textbf{Proof}: Let $G = (V_G, E_G)$ and $H = (V_H, E_H)$ be simple graphs. Assume $G \cong H$, meaning there exists an isomorphism $f: V_G \rightarrow V_H$ such that for any two vertices $u, v \in V_G$, $u$ and $v$ are adjacent in $G$ if and only if $f(u)$ and $f(v)$ are adjacent in $H$. 
+\textbf{Proof}: Let $G = (V_G, E_G)$ and $H = (V_H, E_H)$ be simple graphs. Assume $G \cong H$, meaning there exists an isomorphism $f: V_G \rightarrow V_H$ such that for any two vertices $u, v \in V_G$, $u$ and $v$ are adjacent in $G$ if and only if $f(u)$ and $f(v)$ are adjacent in $H$.
 
 Now, let's define a function $g: V_G \rightarrow V_H$ such that $g(u) = f(u)$ for all $u \in V_G$. It's clear that $g$ is also a bijection.
 
@@ -29,4 +29,11 @@ Number of edges in \[K_n =  \frac{n(n-1)}{2} \]
 (b).
 In the case of Kn, it is bipartite if and only if n is even. When n is odd, Kn cannot be bipartite because it would require an odd number of vertices in each partition, which is not possible. Therefore, Kn is bipartite when n is \textbf{even}.
 
+(c).
+For every vertex in X there are n vertex in Y that are adjacent to it, so
+\[ k_{m,n} = mn \]
+
+(d).
+According to the Euler's Theorem, A connected graph with at least one edge has an Euler cycle if and only if it has
+no vertices of odd degree.  For the complete bipartite graph Km,n to be Eulerian, both m and n must be even.
 \end{document}
