@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\textbf{Claim}: If $G \cong H$, then $\overline{G} \cong \overline{H}$, where $\overline{G}$ and $\overline{H}$ are the complements of $G$ and $H$ respectively.
+
+\textbf{Proof}: Let $G = (V_G, E_G)$ and $H = (V_H, E_H)$ be simple graphs. Assume $G \cong H$, meaning there exists an isomorphism $f: V_G \rightarrow V_H$ such that for any two vertices $u, v \in V_G$, $u$ and $v$ are adjacent in $G$ if and only if $f(u)$ and $f(v)$ are adjacent in $H$. 
+
+Now, let's define a function $g: V_G \rightarrow V_H$ such that $g(u) = f(u)$ for all $u \in V_G$. It's clear that $g$ is also a bijection.
+
+We will show that $g$ is an isomorphism between the complements $\overline{G}$ and $\overline{H}$.
+
+\textbf{Vertex Correspondence}: Since $g$ is a bijection, it establishes a one-to-one correspondence between the vertices of $\overline{G}$ and $\overline{H}$.
+
+\textbf{Edge Correspondence}: Let $(u, v)$ be an edge in $\overline{G}$, then $(u, v)$ is not an edge in $G$. Since $G \cong H$, $f(u)$ and $f(v)$ are not adjacent in $H$. Therefore, $(f(u), f(v))$ is an edge in $\overline{H}$. This implies that $(g(u), g(v)) = (f(u), f(v))$ is an edge in $\overline{H}$. Conversely, if $(u, v)$ is not an edge in $\overline{G}$, then $(f(u), f(v))$ is not an edge in $\overline{H}$.
+
+\textbf{Isomorphism}: Since $g$ preserves adjacency, it is an isomorphism between $\overline{G}$ and $\overline{H}$.
+
+Therefore, if $G \cong H$, then $\overline{G} \cong \overline{H}$.
+
+\textbf{Q2}
+
+(a).To find the total number of edges, we can use the formula for the number of edges in a complete graph:
+
+Number of edges in \[K_n =  \frac{n(n-1)}{2} \]
+
+(b).
+In the case of Kn, it is bipartite if and only if n is even. When n is odd, Kn cannot be bipartite because it would require an odd number of vertices in each partition, which is not possible. Therefore, Kn is bipartite when n is \textbf{even}.
+
+\end{document}
