@@ -36,4 +36,16 @@ For every vertex in X there are n vertex in Y that are adjacent to it, so
 (d).
 According to the Euler's Theorem, A connected graph with at least one edge has an Euler cycle if and only if it has
 no vertices of odd degree.  For the complete bipartite graph Km,n to be Eulerian, both m and n must be even.
+
+\textbf{Q3}
+
+This question can be proved by contradiction
+Suppose $ |X| \neq |Y| $
+Without loss of generality, assume $|X| < |Y|$.
+Since G is r-regular, the total number of edges in G is $|E| = r|X|$.
+But each edge connects one vertex from X to one vertex from Y, so $|E| = r|X|$ must be equal to $|Y|$ since $|X| < |Y|$.
+This implies that there are not enough vertices in X to accommodate all the edges.
+Therefore, there must be some vertex in Y that does not have a neighbor in X.
+This contradicts the assumption that G is bipartite, as every edge connects a vertex from X to a vertex from Y.
+Hence, our assumption that $|X| \neq |Y|$ is false
 \end{document}
